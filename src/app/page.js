@@ -1,12 +1,14 @@
 "use client";
 
-import { Box, Card, CardContent, Fade, Typography } from "@mui/material";
+import { Box, Card, CardContent, Fade } from "@mui/material";
 import { useState } from "react";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import Topbar from "./components/Topbar";
 import HomeContent from "./pages/Home"; // Import HomeContent
 import MyTeam from "./pages/MyTeam"; // Import the component
+import Stats from "./pages/stats";
+import Transfers from "./pages/transfers";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("Home"); // Default Home
@@ -38,17 +40,8 @@ export default function App() {
 
                 {activeTab === "My Team" && <MyTeam />}
 
-                {activeTab === "Transfers" && (
-                  <Typography variant="body1">
-                    Here you can check the latest transfers and updates related
-                    to players.
-                  </Typography>
-                )}
-                {activeTab === "Stats" && (
-                  <Typography variant="body1">
-                    View your teams statistics and performance here.
-                  </Typography>
-                )}
+                {activeTab === "Transfers" && <Transfers />}
+                {activeTab === "Stats" && <Stats />}
               </Box>
             </Fade>
           </CardContent>
