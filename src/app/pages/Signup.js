@@ -1,19 +1,35 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "../utils/supabaseClient"; // Adjust path as needed
 
 export default function Signup({ onSignupSuccess, onSwitchToLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Fake signup success
-    if (password === confirmPassword) {
-      onSignupSuccess();
-    } else {
+    if (password !== confirmPassword) {
       alert("Passwords do not match!");
+      return;
+    }
+
+    setLoading(true);
+
+    const { data, error } = await supabase.auth.signUp({
+      email: username, // Supabase uses email as the identifier
+      password,
+    });
+
+    setLoading(false);
+
+    if (error) {
+      alert(error.message);
+    } else {
+      alert("Signup successful! Check your email to confirm.");
+      onSignupSuccess(); // optional redirect or state update
     }
   };
 
@@ -23,13 +39,13 @@ export default function Signup({ onSignupSuccess, onSwitchToLogin }) {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
-          type="text"
-          placeholder="Username"
+          type="email"
+          placeholder="Email"
           className="w-full px-4 py-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          autoComplete="username"
+          autoComplete="email"
         />
         <input
           type="password"
@@ -52,9 +68,10 @@ export default function Signup({ onSignupSuccess, onSwitchToLogin }) {
 
         <button
           type="submit"
+          disabled={loading}
           className="w-full bg-green-600 hover:bg-green-700 transition-colors py-3 rounded text-white font-semibold"
         >
-          Sign Up
+          {loading ? "Signing Up..." : "Sign Up"}
         </button>
       </form>
 

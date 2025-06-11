@@ -2,16 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiBell, FiMenu, FiSettings, FiX } from "react-icons/fi";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 
+// Language options
 const languages = [
   { code: "en", label: "English", flag: "/flags/en.png" },
   { code: "fr", label: "Français", flag: "/flags/fr.webp" },
   { code: "ar", label: "العربية", flag: "/flags/tn.webp" },
 ];
 
+// Language selector dropdown
 function LanguageSelect({ language, setLanguage }) {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -87,6 +89,54 @@ function LanguageSelect({ language, setLanguage }) {
   );
 }
 
+// Settings dropdown component
+function SettingsDropdown() {
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const items = [
+    { label: "Account", onClick: () => alert("Account") },
+    { label: "Settings", onClick: () => alert("Settings") },
+    { label: "Support", onClick: () => alert("Support") },
+  ];
+
+  return (
+    <div className="relative" ref={dropdownRef}>
+      <FiSettings
+        className="text-xl hover:text-green-400 cursor-pointer"
+        onClick={() => setOpen(!open)}
+      />
+      {open && (
+        <ul className="absolute right-0 mt-2 w-40 bg-gray-800 text-white rounded shadow-lg z-50">
+          {items.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => {
+                item.onClick();
+                setOpen(false);
+              }}
+              className="px-4 py-2 hover:bg-green-600 cursor-pointer"
+            >
+              {item.label}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+// Main Navbar component
 export default function Navbar({ onTabChange }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -161,6 +211,8 @@ export default function Navbar({ onTabChange }) {
             <LanguageSelect language={language} setLanguage={setLanguage} />
             {isLoggedIn ? (
               <>
+                <FiBell className="text-xl hover:text-green-400 cursor-pointer" />
+                <SettingsDropdown />
                 <FaUserCircle className="text-2xl" />
                 <button
                   onClick={() => setIsLoggedIn(false)}

@@ -112,77 +112,231 @@ export const formations = {
 
 export const substitutesData = [
   {
-    name: "Sub Player 1",
-    position: "Sub",
-    image: "/subs/player1.jpg",
+    name: "Phil Foden",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 85,
+  },
+  {
+    name: "Jadon Sancho",
+    position: "Forward",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 83,
+  },
+  {
+    name: "Wilfried Zaha",
+    position: "Forward",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 81,
+  },
+  {
+    name: "Youri Tielemans",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 82,
+  },
+  {
+    name: "James Tarkowski",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 79,
+  },
+  {
+    name: "Nick Pope",
+    position: "Goalkeeper",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
     rating: 80,
   },
   {
-    name: "Sub Player 2",
-    position: "Sub",
-    image: "/subs/player2.jpg",
-    rating: 78,
+    name: "Eduardo Camavinga",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 81,
   },
   {
-    name: "Sub Player 1",
-    position: "Sub",
-    image: "/subs/player1.jpg",
-    rating: 80,
+    name: "João Félix",
+    position: "Forward",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 84,
   },
   {
-    name: "Sub Player 1",
-    position: "Sub",
-    image: "/subs/player1.jpg",
-    rating: 80,
-  },
-  {
-    name: "Sub Player 1",
-    position: "Sub",
-    image: "/subs/player1.jpg",
-    rating: 80,
-  },
-  {
-    name: "Sub Player 1",
-    position: "Sub",
-    image: "/subs/player1.jpg",
-    rating: 80,
+    name: "Pau Torres",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p58621.png",
+    rating: 82,
   },
 ];
 
 export const leaguePlayersData = [
   {
-    name: "Player One",
+    name: "Kylian Mbappé",
     position: "Forward",
-    image: "/league/player1.jpg",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
   },
   {
-    name: "Player Two",
+    name: "Jude Bellingham",
     position: "Midfielder",
-    image: "/league/player2.jpg",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
   },
   {
-    name: "Player One",
-    position: "Forward",
-    image: "/league/player1.jpg",
+    name: "Rúben Dias",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
   },
   {
-    name: "Player One",
+    name: "Vinícius Júnior",
     position: "Forward",
-    image: "/league/player1.jpg",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
   },
   {
-    name: "Player One",
-    position: "Forward",
-    image: "/league/player1.jpg",
+    name: "Joshua Kimmich",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
   },
   {
-    name: "Player One",
-    position: "Forward",
-    image: "/league/player1.jpg",
+    name: "Pedri",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
   },
   {
-    name: "Player One",
+    name: "Jan Oblak",
+    position: "Goalkeeper",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Luka Modrić",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Karim Benzema",
     position: "Forward",
-    image: "/league/player1.jpg",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Achraf Hakimi",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Jan Oblak",
+    position: "Goalkeeper",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Luka Modrić",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Karim Benzema",
+    position: "Forward",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Achraf Hakimi",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Jan Oblak",
+    position: "Goalkeeper",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Luka Modrić",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Karim Benzema",
+    position: "Forward",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Achraf Hakimi",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Jan Oblak",
+    position: "Goalkeeper",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Luka Modrić",
+    position: "Midfielder",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Karim Benzema",
+    position: "Forward",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+  {
+    name: "Achraf Hakimi",
+    position: "Defender",
+    image:
+      "https://resources.premierleague.com/premierleague/photos/players/250x250/p121160.png",
+  },
+];
+
+export const newsFeed = [
+  {
+    title: "Upcoming Friendly Matches Announced",
+    date: "June 1, 2025",
+    excerpt:
+      "Tunisia will face off against Morocco and Algeria in the upcoming friendly matches set for July.",
+    link: "/news/friendly-matches",
+    background:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80",
+  },
+  {
+    title: "Youth Academy Report",
+    date: "May 29, 2025",
+    excerpt:
+      "A look into the promising talents graduating from Tunisia’s youth academy this year.",
+    link: "/news/youth-academy",
+    background:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80",
+  },
+  {
+    title: "New Stadium Renovation Plans",
+    date: "May 25, 2025",
+    excerpt:
+      "The national stadium is set to undergo renovations to increase capacity and fan experience.",
+    link: "/news/stadium-renovation",
+    background:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1470&q=80",
   },
 ];

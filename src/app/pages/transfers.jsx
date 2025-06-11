@@ -5,34 +5,32 @@ const transfersData = [
     playerImage: "/players/ali-maaloul.jpg",
     currentTeam: {
       name: "Étoile Sportive du Sahel",
-      logo: "/clubs/etoile-sportive-du-sahel.png",
+      logo: "/clubs/ess.png",
     },
     price: "€1.2M",
     rumoredClubs: [
-      { id: 1, name: "Club Africain", logo: "/clubs/club-africain.png" },
-      { id: 2, name: "CS Sfaxien", logo: "/clubs/cs-sfaxien.png" },
+      { id: 1, name: "Club Africain", logo: "/clubs/ca.png" },
+      { id: 2, name: "CS Sfaxien", logo: "/clubs/css.png" },
     ],
   },
   {
     id: 2,
-    playerName: "Yassine Chikhaoui",
-    playerImage: "/players/yassine-chikhaoui.jpg",
+    playerName: "Seiff Jaziri",
+    playerImage: "/players/jaziri.webp",
     currentTeam: {
       name: "Étoile Sportive du Sahel",
-      logo: "/clubs/etoile-sportive-du-sahel.png",
+      logo: "/clubs/ess.png",
     },
     price: "€900K",
-    rumoredClubs: [
-      { id: 3, name: "US Monastir", logo: "/clubs/us-monastir.png" },
-    ],
+    rumoredClubs: [{ id: 3, name: "US Monastir", logo: "/clubs/usm.png" }],
   },
   {
     id: 3,
     playerName: "Fakhreddine Ben Youssef",
-    playerImage: "/players/fakhreddine-ben-youssef.jpg",
+    playerImage: "/players/fakhr-benyoussef.jpg",
     currentTeam: {
       name: "CS Sfaxien",
-      logo: "/clubs/cs-sfaxien.png",
+      logo: "/clubs/css.png",
     },
     price: "€800K",
     rumoredClubs: [],
@@ -40,22 +38,20 @@ const transfersData = [
   {
     id: 4,
     playerName: "Taha Yassine Khenissi",
-    playerImage: "/players/taha-khenissi.jpg",
+    playerImage: "/players/khenissi.webp",
     currentTeam: {
       name: "Espérance de Tunis",
-      logo: "/clubs/esperance-de-tunis.png",
+      logo: "/clubs/est.png",
     },
     price: "€1.5M",
-    rumoredClubs: [
-      { id: 4, name: "Club Africain", logo: "/clubs/club-africain.png" },
-    ],
+    rumoredClubs: [{ id: 4, name: "Club Africain", logo: "/clubs/ca.png" }],
   },
 ];
 
 export default function Transfers() {
   return (
-    <div className="p-8 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-extrabold mb-8 text-gray-900 dark:text-gray-100">
+    <div className="p-4 md:p-8 max-w-7xl mx-auto">
+      <h1 className="text-2xl md:text-3xl font-extrabold mb-6 text-gray-900 dark:text-gray-100">
         Ligue 1 Tunisia Transfers
       </h1>
 
@@ -63,10 +59,14 @@ export default function Transfers() {
         <table className="min-w-full bg-white dark:bg-gray-900 rounded-lg">
           <thead className="bg-green-600 text-white">
             <tr>
-              <th className="text-left px-6 py-4 rounded-tl-lg">Player</th>
-              <th className="text-left px-6 py-4">Current Team</th>
-              <th className="text-left px-6 py-4">Price</th>
-              <th className="text-left px-6 py-4 rounded-tr-lg">
+              <th className="text-left px-4 py-3 md:px-6 md:py-4 rounded-tl-lg">
+                Player
+              </th>
+              <th className="text-left px-4 py-3 md:px-6 md:py-4">
+                Current Team
+              </th>
+              <th className="text-left px-4 py-3 md:px-6 md:py-4">Price</th>
+              <th className="text-left px-4 py-3 md:px-6 md:py-4 rounded-tr-lg">
                 Rumored Clubs
               </th>
             </tr>
@@ -84,52 +84,60 @@ export default function Transfers() {
               }) => (
                 <tr
                   key={id}
-                  className="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-900 transition"
+                  className="border-b border-gray-200 dark:border-gray-700 hover:bg-green-50 dark:hover:bg-green-900/30 transition"
                 >
                   {/* Player */}
-                  <td className="px-6 py-4 flex items-center space-x-4">
-                    <img
-                      src={playerImage}
-                      alt={playerName}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-green-600"
-                    />
-                    <span className="font-semibold text-gray-900 dark:text-gray-100">
-                      {playerName}
-                    </span>
+                  <td className="px-4 py-3 md:px-6 md:py-4">
+                    <div className="flex items-center space-x-3">
+                      <img
+                        src={playerImage}
+                        alt={playerName}
+                        className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-green-600"
+                      />
+                      <span className="font-semibold text-gray-900 dark:text-gray-100">
+                        {playerName}
+                      </span>
+                    </div>
                   </td>
 
                   {/* Current Team */}
-                  <td className="px-6 py-4 flex items-center space-x-4">
-                    <img
-                      src={currentTeam.logo}
-                      alt={currentTeam.name}
-                      className="w-12 h-12 rounded-full object-cover border-2 border-green-600"
-                    />
-                    <span className="text-gray-800 dark:text-gray-300 font-medium">
-                      {currentTeam.name}
-                    </span>
+                  <td className="px-4 py-3 md:px-6 md:py-4">
+                    <div className="flex items-center space-x-3">
+                      <img
+                        src={currentTeam.logo}
+                        alt={currentTeam.name}
+                        className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover border-2 border-green-600"
+                      />
+                      <span className="text-gray-800 dark:text-gray-300 font-medium">
+                        {currentTeam.name}
+                      </span>
+                    </div>
                   </td>
 
                   {/* Price */}
-                  <td className="px-6 py-4 text-green-700 font-semibold">
+                  <td className="px-4 py-3 md:px-6 md:py-4 text-green-700 dark:text-green-400 font-semibold">
                     {price}
                   </td>
 
                   {/* Rumored Clubs */}
-                  <td className="px-6 py-4 flex space-x-3">
-                    {rumoredClubs.length > 0 ? (
-                      rumoredClubs.map(({ id: clubId, name, logo }) => (
-                        <img
-                          key={clubId}
-                          src={logo}
-                          alt={name}
-                          title={name}
-                          className="w-10 h-10 rounded-full border border-green-500 cursor-pointer hover:scale-110 transform transition"
-                        />
-                      ))
-                    ) : (
-                      <span className="text-gray-400 italic">No rumors</span>
-                    )}
+                  <td className="px-4 py-3 md:px-6 md:py-4">
+                    <div className="flex flex-wrap gap-2 items-center">
+                      {rumoredClubs.length > 0 ? (
+                        rumoredClubs.map(({ id: clubId, name, logo }) => (
+                          <img
+                            key={clubId}
+                            src={logo}
+                            alt={name}
+                            title={name}
+                            className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-green-500 cursor-pointer hover:scale-110 transform transition"
+                          />
+                        ))
+                      ) : (
+                        <span className="text-gray-400 italic text-sm">
+                          No rumors
+                        </span>
+                      )}
+                    </div>
                   </td>
                 </tr>
               )

@@ -1,15 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "../utils/supabaseClient"; // Adjust the path if needed
 
 export default function Login({ onLoginSuccess, onSwitchToSignup }) {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Fake auth success
-    onLoginSuccess();
+    setLoading(true);
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    setLoading(false);
+
+    if (error) {
+      alert(error.message);
+    } else {
+      onLoginSuccess(); // callback to continue app flow
+    }
   };
 
   return (
@@ -18,13 +32,13 @@ export default function Login({ onLoginSuccess, onSwitchToSignup }) {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
-          type="text"
-          placeholder="Username"
+          type="email"
+          placeholder="Email"
           className="w-full px-4 py-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
-          autoComplete="username"
+          autoComplete="email"
         />
         <input
           type="password"
@@ -38,9 +52,10 @@ export default function Login({ onLoginSuccess, onSwitchToSignup }) {
 
         <button
           type="submit"
+          disabled={loading}
           className="w-full bg-green-600 hover:bg-green-700 transition-colors py-3 rounded text-white font-semibold"
         >
-          Log In
+          {loading ? "Logging In..." : "Log In"}
         </button>
       </form>
 

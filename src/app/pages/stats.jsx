@@ -4,7 +4,7 @@ const allStats = [
   {
     id: 1,
     playerName: "Ali Maaloul",
-    playerImage: "/players/ali-maaloul.jpg",
+    playerImage: "/players/Ali-Maaloul.jpg",
     appearances: 28,
     goals: 5,
     assists: 7,
@@ -14,8 +14,8 @@ const allStats = [
   },
   {
     id: 2,
-    playerName: "Yassine Chikhaoui",
-    playerImage: "/players/yassine-chikhaoui.jpg",
+    playerName: "hannibal mejbri",
+    playerImage: "/players/hannibal-mejbri.jpg",
     appearances: 25,
     goals: 8,
     assists: 10,
@@ -26,7 +26,7 @@ const allStats = [
   {
     id: 3,
     playerName: "Fakhreddine Ben Youssef",
-    playerImage: "/players/fakhreddine-ben-youssef.jpg",
+    playerImage: "/players/fakhr-benyoussef.jpg",
     appearances: 30,
     goals: 12,
     assists: 5,
@@ -37,7 +37,7 @@ const allStats = [
   {
     id: 4,
     playerName: "Taha Yassine Khenissi",
-    playerImage: "/players/taha-khenissi.jpg",
+    playerImage: "/players/khenissi.webp",
     appearances: 27,
     goals: 10,
     assists: 6,
@@ -48,7 +48,7 @@ const allStats = [
   {
     id: 5,
     playerName: "Seifeddine Jaziri",
-    playerImage: "/players/seifeddine-jaziri.jpg",
+    playerImage: "/players/jaziri.webp",
     appearances: 29,
     goals: 4,
     assists: 3,
@@ -81,7 +81,7 @@ const allStats = [
   {
     id: 8,
     playerName: "Anis Ben Slimane",
-    playerImage: "/players/anis-ben-slimane.jpg",
+    playerImage: "/players/ben-solimane.jpg",
     appearances: 23,
     goals: 1,
     assists: 2,
@@ -92,7 +92,7 @@ const allStats = [
   {
     id: 9,
     playerName: "Wahbi Khazri",
-    playerImage: "/players/wahbi-khazri.jpg",
+    playerImage: "/players/wahbi_khazri.jpg",
     appearances: 26,
     goals: 9,
     assists: 3,
@@ -109,17 +109,6 @@ const allStats = [
     assists: 6,
     minutesPlayed: 2500,
     yellowCards: 2,
-    redCards: 0,
-  },
-  {
-    id: 11,
-    playerName: "Ayman Ben Mohamed",
-    playerImage: "/players/ayman-ben-mohamed.jpg",
-    appearances: 20,
-    goals: 0,
-    assists: 1,
-    minutesPlayed: 1600,
-    yellowCards: 1,
     redCards: 0,
   },
 ];
