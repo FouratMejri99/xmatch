@@ -2,7 +2,7 @@ const transfersData = [
   {
     id: 1,
     playerName: "Ali Maaloul",
-    playerImage: "/players/ali-maaloul.jpg",
+    playerImage: "/players/Ali-Maaloul.jpg",
     currentTeam: {
       name: "Étoile Sportive du Sahel",
       logo: "/clubs/ess.png",

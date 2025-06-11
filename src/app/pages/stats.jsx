@@ -92,7 +92,7 @@ const allStats = [
   {
     id: 9,
     playerName: "Wahbi Khazri",
-    playerImage: "/players/wahbi_khazri.jpg",
+    playerImage: "/players/Wahbi_khazri.jpg",
     appearances: 26,
     goals: 9,
     assists: 3,
